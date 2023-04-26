@@ -1,12 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>{{ helloMessage }}</h2>>
+    <h2>{{ helloMessage }}</h2>
   </div>
 </template>
 
 <script>
-import { onMounted } from 'vue';
 
 export default {
   name: 'HelloWorld',
@@ -19,7 +18,7 @@ export default {
     msg: String
   },
   mounted() {
-    this.$hello.api.getHellowMessage().then( resp => {
+    this.$hello_api.getHelloMessage().then( resp => {
       this.helloMessage = resp.message
     })
   }
